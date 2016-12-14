@@ -1,4 +1,4 @@
-multiroom_chat
+multiroom_chat (http://localhost:8091/)
 
 1- criar um diretorio
 2- iniciar o npm através do comando "npm init" dentro da pasta do projeto
@@ -9,3 +9,4 @@ multiroom_chat
 	- bodyparser (middlaware)
 	- express-validator
 4- criar a estrutura de pastas
+5- configurar o servidor no arquivo app.js e server.js
