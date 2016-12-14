@@ -10,3 +10,5 @@ multiroom_chat (http://localhost:8091/)
 	- express-validator
 4- criar a estrutura de pastas
 5- configurar o servidor no arquivo app.js e server.js
+6- configurar rotas
+
