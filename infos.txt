@@ -1,0 +1,11 @@
+multiroom_chat
+
+1- criar um diretorio
+2- iniciar o npm através do comando "npm init" dentro da pasta do projeto
+3- baixar as dependencias:
+	- express
+	- ejs
+	- consign (autoloader)
+	- bodyparser (middlaware)
+	- express-validator
+4- criar a estrutura de pastas
