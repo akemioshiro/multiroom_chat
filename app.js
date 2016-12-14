@@ -18,4 +18,32 @@ io.on("connection", function (socket) {
     socket.on("disconnect", function () {
         console.log("O usuário desconectou");
     });
+
+    socket.on("msgParaServidor", function (data) {
+        /* dialogos */
+        socket.emit("msgParaCliente",
+            { apelido: data.apelido, mensagem: data.mensagem }
+        );
+
+        socket.broadcast.emit(
+            "msgParaCliente",
+            { apelido: data.apelido, mensagem: data.mensagem }
+        );
+
+
+        /* atualizar participantes */
+        if (parseInt(data.apelido_atualizado_nos_clientes) == 0) {
+            socket.emit(
+                "participantesParaCliente",
+                { apelido: data.apelido, mensagem: data.mensagem }
+            );
+
+            socket.broadcast.emit(
+                "participantesParaCliente",
+                { apelido: data.apelido, mensagem: data.mensagem }
+            );
+        }
+    });
+
+
 });
